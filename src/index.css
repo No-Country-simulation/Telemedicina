@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .secondHeaders{
-    @apply text-2xl lg:text-3xl text-primary font-bold;
+    @apply text-2xl lg:text-3xl text-primary font-bold
 }
