@@ -1,11 +1,13 @@
+import ShowDoctors from "./components/ShowDoctors"
 import Testimonials from "./components/Testimonials/Testimonials"
 
 
 const Home = () => {
   return (
-    <div>
+    <>
     <Testimonials/>
-    </div>
+    <ShowDoctors/>
+    </>
   )
 }
 
