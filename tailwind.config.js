@@ -8,9 +8,10 @@ export default {
     extend: {
       colors:{
         primary:'#234A6B',
+        btns:'#546FEA'
       },
       backgroundImage:{
-        'testimonials':'url(../src/assets/testimonials-bg.png)'
+        'testimonials':'url(../src/assets/testimonials-bg.svg)'
               }
     },
   },
