@@ -1,4 +1,4 @@
-import { Card, CardContent } from '@mui/material';
+import { Button, Card, CardContent } from '@mui/material';
 import Doctor1 from '../../../assets/doctor1.svg';
 import Doctor2 from '../../../assets/doctor2.svg';
 import Doctor3 from '../../../assets/doctor3.svg';
@@ -33,7 +33,7 @@ const ShowDoctors = () => {
           return (
             <Card
               key={index}
-              className="!rounded-[25px] max-w-[320px] bg-slate-500 flex flex-col items-center"
+              className="rounded-[25px] max-w-[320px]  flex flex-col items-center"
             >
               <img src={doctor.image} alt="doctor" className="w-full " />
               <CardContent className="text-center">
@@ -44,9 +44,9 @@ const ShowDoctors = () => {
           );
         })}
       </section>
-      <button className="bg-btns rounded-full px-10 py-3 text-white font-medium">
+      <Button className="bg-btns rounded-full px-10 py-2 shadow-lg text-white font-medium hover:bg-blue-500 capitalize">
         Ver Más
-      </button>
+      </Button>
     </div>
   );
 };
