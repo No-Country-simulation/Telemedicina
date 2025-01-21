@@ -1,4 +1,4 @@
-import SimpleSlider from './SimpleSlider';
+import SimpleSlider from './components/SimpleSlider';
 
 const Testimonials = () => {
   return (

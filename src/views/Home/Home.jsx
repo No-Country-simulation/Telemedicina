@@ -1,4 +1,4 @@
-import Testimonials from "./components/Testimonials"
+import Testimonials from "./components/Testimonials/Testimonials"
 
 
 const Home = () => {
