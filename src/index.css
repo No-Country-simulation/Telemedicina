@@ -5,6 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+    font-family: "Poppins", serif;
+}
+
 .secondHeaders{
     @apply text-2xl lg:text-3xl text-primary font-bold
 }
