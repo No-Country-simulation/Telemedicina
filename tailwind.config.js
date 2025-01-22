@@ -12,11 +12,15 @@ export default {
       },
       colors:{
         primary:'#234A6B',
+        blueLight:'#6FBBE3',
         btns:'#546FEA'
       },
       backgroundImage:{
         'testimonials':'url(../src/assets/testimonials-bg.svg)'
-              }
+      },
+      screens:{
+        'custom-sm':'425px'
+      }
     },
   },
   plugins: [],
