@@ -62,13 +62,9 @@ const SimpleSlider = () => {
     <Box
       sx={{
         maxWidth: 1024,
-        mx: 'auto',
-        px: 2,
-        paddingTop:{ xs:2,md:'25px'},
-        paddingX:{xs:4,md:6},
-        
+        mx: 'auto',        
       }}
-     
+     className='px-3 py-5'
     >
       <Slider {...settings}>
         {testimonials.map((testimonial) => (
