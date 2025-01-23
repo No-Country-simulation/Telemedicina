@@ -11,6 +11,7 @@ export default {
         poppins: ["Poppins", "sans-serif"],
       },
       colors:{
+        background:'#f1f3f4',
         primary:'#234A6B',
         blueLight:'#6FBBE3',
         btns:'#546FEA'
