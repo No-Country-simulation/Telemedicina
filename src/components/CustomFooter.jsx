@@ -1,6 +1,7 @@
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import NoCountry from '../assets/no-country-logo.jpg'
 
 const CustomFooter = () => {
   return (
@@ -68,11 +69,14 @@ const CustomFooter = () => {
           </article>
         </section>
       </div>
-      <div className="w-full text-center flex flex-col md:flex-row md:justify-center py-3 bg-[#ECF6FF] text-gray-500">
-      <span>
-        Proyecto No-Country.
+      <div className="w-full text-center flex flex-col md:flex-row md:justify-center py-3 bg-[#ECF6FF] text-gray-500 space-x-2">
+     <div className='flex justify-center gap-3'>
+     <span>
+        Proyecto No-Country
       </span>
-      <span>Todos los derechos reservados.</span>
+      <img src={NoCountry} alt="logo" className='w-6' />
+     </div>
+      <span>Todos los derechos reservados</span>
       </div>
     </>
   );
