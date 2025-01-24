@@ -30,6 +30,7 @@ export const LoginPage = () => {
 <Typography
           variant="h3"
           sx={{ mb: 1 }}
+          className="text-primary"
         >Login</Typography>
 
 <form>
@@ -74,6 +75,12 @@ export const LoginPage = () => {
                     <Grid container direction='row' justifyContent='end'>
                       <Link  component={RouterLink} to="/auth/register" color="inherit">
                         Crea tu Cuenta
+                      </Link>
+                    </Grid>
+
+                    <Grid container direction='row' justifyContent='end'>
+                      <Link  component={RouterLink} to="/auth/contrasena" color="inherit">
+                        Olvido Su Contraseña
                       </Link>
                     </Grid>
                   </Grid>
