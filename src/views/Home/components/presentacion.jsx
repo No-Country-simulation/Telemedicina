@@ -1,10 +1,8 @@
 import doctora from "../assets/doc.png";
 import calendario from "../assets/calendario.jpg";
-import ResponsiveAppBar from "./navbar";
 const Presentacion = () => {
   return (
     <>
-       <ResponsiveAppBar/>
       <div className="h-screen max-h-[600px] relative max-custom-md:bg-gradient-to-b from-[#3BA5D8] to-[#BCE1F3] max-custom-md:max-h-fit  max-custom-md:py-[4%]">
         <div className="relative w-[100%] top-[20%] max-custom-md:top-0">
           <div className=" relative w-1/2 top-[20%] max-md:w-fit z-20 pl-20 max-md:pl-0 max-md:my-0 max-md:mx-auto max-md:px-6 max-custom-sm:px-4">
