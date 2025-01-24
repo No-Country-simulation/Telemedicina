@@ -20,7 +20,9 @@ export default {
         'testimonials':'url(../src/assets/testimonials-bg.svg)'
       },
       screens:{
-        'custom-sm':'425px'
+        'custom-sm':'425px',
+        'custom-md':'900px'
+
       }
     },
   },
