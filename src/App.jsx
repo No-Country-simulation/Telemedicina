@@ -12,29 +12,19 @@ import CreaterAppoinmentsPatient from './views/DashboardPatient/ScheduleAppoinme
 import StateAppoinmentsPatient from './views/DashboardPatient/ScheduleAppoinment/components/StateAppoinmentsPatient';
 import { ContraSenaPage } from './auth/ContraSenaPage';
 
-
-
-
 export const App = () => {
   return (
     <Routes>
-
       {/* Rutas de la Landing Page */}
       <Route path="/" element={<LayoutLadingPage />}>
         <Route index element={<Home />} />
       </Route>
-      <Route path='/auth/contrasena' element={<ContraSenaPage/>}/>
-      <Route path='/auth/login' element={<LoginPage/>}/>
-      <Route path='/auth/register/' element={<RegisterPages/>}/>   
-    </Routes>
-  )
-}
 
-
-      {/* Rutas de autenticación */}
+      {/* Rutas de Autenticacion */}
+      <Route path="/auth/contrasena" element={<ContraSenaPage />} />
       <Route path="/auth/login" element={<LoginPage />} />
       <Route path="/auth/register/" element={<RegisterPages />} />
-      
+
       {/* Rutas del Dashboard Paciente */}
       <Route path="/dashboard-paciente" element={<LayoutDashboard />}>
         <Route index element={<DashboardPatient />} />
