@@ -1,5 +1,5 @@
-import doctora from "../assets/doc.png";
-import calendario from "../assets/calendario.jpg";
+import doctora from "../../../assets/doc.png";
+import calendario from "../../../assets/calendario.jpg";
 const Presentacion = () => {
   return (
     <>

@@ -1,4 +1,4 @@
-import doctor from "../assets/doc-1.jpg";
+import doctor from "../../../assets/doc-1.jpg";
 const Profesionales= ()=>{
     return (
         <div className="bg-[#ECF6FF] pt-[5%] pb-[2%] relative">
