@@ -4,6 +4,8 @@ import { RegisterPages } from './auth/registerPages';
 import LayoutLadingPage from './layouts/LayoutLadingPage';
 import Home from './views/Home/Home';
 import { ContraSenaPage } from './auth/ContraSenaPage';
+import { SideBar } from './components/citasmedicascrud/sidebar';
+
 
 
 
@@ -16,6 +18,7 @@ export const App = () => {
       <Route path='/auth/contrasena' element={<ContraSenaPage/>}/>
       <Route path='/auth/login' element={<LoginPage/>}/>
       <Route path='/auth/register/' element={<RegisterPages/>}/>   
+      <Route path='/components/citasmedicascrud/SideBar/' element={<SideBar/>}/>   
     </Routes>
   )
 }
