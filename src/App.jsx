@@ -10,6 +10,10 @@ import { TableTreatmentsPatient } from './views/DashboardPatient/Treatments/comp
 import DiagnosticsTablePatient from './views/DashboardPatient/Diagnostics/components/DiagnosticsTablePatient';
 import CreaterAppoinmentsPatient from './views/DashboardPatient/ScheduleAppoinment/components/CreaterAppoinmentsPatient';
 import StateAppoinmentsPatient from './views/DashboardPatient/ScheduleAppoinment/components/StateAppoinmentsPatient';
+import { ContraSenaPage } from './auth/ContraSenaPage';
+
+
+
 
 export const App = () => {
   return (
@@ -19,6 +23,13 @@ export const App = () => {
       <Route path="/" element={<LayoutLadingPage />}>
         <Route index element={<Home />} />
       </Route>
+      <Route path='/auth/contrasena' element={<ContraSenaPage/>}/>
+      <Route path='/auth/login' element={<LoginPage/>}/>
+      <Route path='/auth/register/' element={<RegisterPages/>}/>   
+    </Routes>
+  )
+}
+
 
       {/* Rutas de autenticación */}
       <Route path="/auth/login" element={<LoginPage />} />

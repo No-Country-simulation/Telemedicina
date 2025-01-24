@@ -22,6 +22,7 @@ export const RegisterPages = () => {
         <Typography
           variant="h3"
           sx={{ mb: 1 }}
+          className="text-primary"
         >
           Login
         </Typography>
@@ -60,9 +61,7 @@ export const RegisterPages = () => {
               sx={{ mt: 2 }}
             >
               <TextField
-                
                 type="date"
-               
                 fullWidth
               />
             </Grid>
@@ -80,9 +79,7 @@ export const RegisterPages = () => {
               />
             </Grid>
 
-            <SplitButton 
-            sx={{ mt: 2 }}
-            />
+            <SplitButton sx={{ mt: 2 }} />
 
             <Grid
               item
@@ -134,7 +131,7 @@ export const RegisterPages = () => {
                 direction="row"
                 justifyContent="end"
               >
-                <Typography sx={{ mr: 1 }}>Ya tienes Cuenta?</Typography>
+              <Typography sx={{ mr: 1 }}>¿Ya tienes Cuenta?</Typography>
                 <Link
                   component={RouterLink}
                   to="/auth/login"
