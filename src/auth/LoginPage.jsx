@@ -6,27 +6,34 @@ import { Button, Grid, Link, TextField, Typography } from "@mui/material"
 
 
 
+
 export const LoginPage = () => {
   return (
-    <Grid 
+
+
+    <Grid
     container
-    spacing={ 0 }
+    spacing={0}
     direction="column"
     alignItems="center"
     justifyContent="center"
-    sx={{minHeight: '100vh', backgroundColor: 'blue', padding: 4}} 
-    >
-      <Grid item 
-      className='box-shadow'
-      xs={ 3 }
-      sx={{ backgroundColor: "white", 
-        padding: 3, 
-        borderRadius: 2 }}
+    sx={{ minHeight: "100vh", padding: 4 }}
+  >
+    <Grid
+        item
+        width={850}
+        className='bg-background shadow-xl'
+        xs={3}
+        sx={{ padding: 3, borderRadius: 2 }}
       >
-        <Typography variant="h5" 
-        sx={{mb: 1}}>Login</Typography>
 
-        <form>
+<Typography
+          variant="h3"
+          sx={{ mb: 1 }}
+          className="text-primary"
+        >Login</Typography>
+
+<form>
                   <Grid container>
                     <Grid item xs={ 12 } 
                     sx={{ mt: 2 }} >
@@ -45,19 +52,23 @@ export const LoginPage = () => {
                       fullWidth/>
                     </Grid>
 
-                    <Grid container spacing={ 2 } sx={{ mb: 2, mt: 2 }}>
+                    <Grid container spacing={ 2 } sx={{ mb: 2, mt: 2,   }}>
                       <Grid item xs={ 12 } sm={ 6 }>
                         <Button variant='contained' 
-                        fullWidth>
+                        fullWidth
+                        sx={{borderRadius: 10}}
+                        className="bg-btns hover:bg-blue-500 ">
                           Login
                         </Button>
                       </Grid>
                       
                       <Grid item xs={ 12 } sm={ 6 }>
                         <Button variant='contained' 
-                        fullWidth>
+                        fullWidth
+                        sx={{borderRadius: 10 }}
+                        className="bg-btns hover:bg-blue-500 ">
                           <Google />
-                          <Typography sx={{ ml: 1  }}>Google</Typography>
+                          <Typography sx={{ ml: 1 }}>Google</Typography>
                         </Button>
                       </Grid>
                     </Grid>
@@ -66,11 +77,20 @@ export const LoginPage = () => {
                         Crea tu Cuenta
                       </Link>
                     </Grid>
+
+                    <Grid container direction='row' justifyContent='end'>
+                      <Link  component={RouterLink} to="/auth/contrasena" color="inherit">
+                        Olvido Su Contraseña
+                      </Link>
+                    </Grid>
                   </Grid>
                 </form>
 
       </Grid>
-    </Grid>
+  </Grid>
+
+
+   
   )
 }
 

@@ -44,7 +44,7 @@ const ShowDoctors = () => {
           );
         })}
       </section>
-      <Button className="bg-btns rounded-full px-10 py-2 shadow-lg text-white font-medium hover:bg-blue-500 capitalize">
+      <Button className="bg-btns rounded-full px-10 py-2 shadow-lg text-white font-medium hover:bg-blue-500 capitalize font-poppins">
         Ver Más
       </Button>
     </div>

@@ -1,6 +1,6 @@
-import Presentacion from "../../../../telemedica/src/comp/presentacion"
-import Profesionales from "../../../../telemedica/src/comp/profesionales"
-import Servicios from "../../../../telemedica/src/comp/servicios"
+import Presentacion from "./components/presentacion"
+import Profesionales from "./components/profesionales"
+import Servicios from "./components/servicios"
 import ShowDoctors from "./components/ShowDoctors"
 import Testimonials from "./components/Testimonials/Testimonials"
 
