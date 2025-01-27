@@ -23,7 +23,7 @@ const doctors = [
 
 const ShowDoctors = () => {
   return (
-    <div className="mx-auto py-4 flex flex-col items-center gap-5 2xl:max-w-screen-2xl ">
+    <div className="mx-auto px-3 py-10 flex flex-col items-center gap-5 2xl:max-w-screen-2xl ">
       <article className="text-center py-4 ">
         <h2 className="secondHeaders pb-4">Conoce Nuestros Médicos</h2>
       </article>
