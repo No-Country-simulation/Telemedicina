@@ -9,7 +9,7 @@ import Patient from '../../assets/patient1.avif';
 
 const DashboardPatient = () => {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-5 md:px-3 max-w-screen-2xl mx-auto">
+    <section className="grid grid-cols-1 md:grid-cols-[230px_1fr_1fr_1fr_1fr] md:px-3 max-w-screen-2xl mx-auto">
       <div className="flex flex-col md:flex-row md:justify-between px-3 md:col-span-6 ">
         {/* Logo */}
         <article className="flex justify-between pt-2 md:flex-1  md:items-center">

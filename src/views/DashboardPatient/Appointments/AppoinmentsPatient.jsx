@@ -20,14 +20,14 @@ const appoinments = [
 
 const AppoinmentsPatient = () => {
   return (
-    <section className="bg-blueLight  flex flex-col items-start rounded-lg w-[90%] mx-auto md:mx-4 md:w-full xl:max-w-[680px] overflow-x-auto scrollbar-thin scrollbar-thumb-btns scrollbar-track-black p-2 md:col-start-1 md:col-end-4 justify-self-center">
+    <section className="bg-blueLight  flex flex-col items-start rounded-lg w-[90%] mx-auto md:mx-4 md:w-full xl:max-w-[680px] overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-white p-2 md:col-start-1 md:col-end-4 justify-self-center">
       <div className="flex items-center w-full">
         <h2 className="secondHeaders text-center md:text-left text-white px-3 mb-2">
           Citas Programadas
         </h2>
         <div className='text-btns font-medium bg-white px-2  py-2 rounded-lg'>3</div>
       </div>
-      <div className="w-full overflow-x-auto space-y-3 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-white">
+      <div className="w-full space-y-3 ">
         <Button className="text-white  font-light text-sm text-center capitalize underline decoration-1 ml-[310px] block">
           Ver Todas
         </Button>

@@ -7,17 +7,18 @@ import Medicine2 from '../../../assets/medicine2.svg';
 
 export const TreatmentsPatient = () => {
   return (
-    <Card className=" md:col-start-2 md:col-end-4 px-3 md:p-3 md:my-3 flex flex-col justify-center gap-2 max-w-[410px] justify-self-center">
-      <h2 className="secondHeaders text-slate-900 text-center md:text-left py-3 md:text-xl md:py-0">
+    <Card className="md:col-start-2 md:col-end-4 mx-3 py-2 md:p-3 md:my-3 flex flex-col justify-center items-center gap-2  justify-self-center">
+      <h2 className="secondHeaders text-slate-900 text-center md:text-left py-3  md:text-xl md:py-0">
         Tratamientos y Recetas
       </h2>
-      <p>Revisa tus tratamientos y recetas médicas.</p>
+      <p className='text-sm text-center md:text-left '>Revisa tus tratamientos y recetas médicas.</p>
       <img
         src={Medicine}
         alt="imagen medicamento"
-        className="hidden md:block"
+        className="hidden md:block w-[200px] lg:w-auto"
       />
-      <img src={Medicine2} alt="imagen medicamento" />
+      <img src={Medicine2} alt="imagen medicamento"
+      className='w-[200px] lg:w-auto' />
     </Card>
   );
 };
