@@ -1,5 +1,6 @@
 const User = require('../models/User');
 const bcrypt = require('bcryptjs');
+
 const createUser = async (req, res) => {
     try {
         console.log('Datos recibidos:', req.body); // Log de entrada
@@ -22,4 +23,26 @@ const getUsers = async (req, res) => {
     }
 };
 
-module.exports = { createUser, getUsers };
+// Método para eliminar un usuario
+const deleteUser = async (req, res) => {
+    try {
+        const { id } = req.params; // Obtén el ID del usuario desde los parámetros de la URL
+
+        // Busca al usuario por su ID
+        const user = await User.findByPk(id);
+
+        // Si el usuario no existe
+        if (!user) {
+            return res.status(404).json({ error: 'Usuario no encontrado' });
+        }
+
+        // Elimina el usuario
+        await user.destroy();
+
+        // Respuesta exitosa
+        res.status(200).json({ message: 'Usuario eliminado exitosamente' });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+};
+module.exports = { createUser, getUsers, deleteUser };
