@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 
 // Rutas
 app.use('/api/users', userRoutes);
-app.use('/api/patient', patientRoutes)
+app.use('/api/patients', patientRoutes)
 app.use('/api/auth', authRoutes);
 
 // Sincronizar base de datos y levantar servidor

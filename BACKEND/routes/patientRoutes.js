@@ -5,7 +5,7 @@ const authMiddleware = require('../middleware/authMiddleware');
 const router = express.Router();
 
 // 🔹 Ruta para que un paciente se registre
-router.post('/registro', registerPaciente);
+router.post('/register', registerPaciente);
 
 // 🔹 Ruta para que un médico registre un paciente (requiere autenticación)
 router.post('/registro/medico', authMiddleware, registerPacienteByMedico);

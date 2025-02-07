@@ -1,11 +1,21 @@
 const express = require('express');
-const { createUser, getUsers , deleteUser } = require('../controllers/userController');
+const { createUser, getUsers , deleteUser,getUserById,updateUser } = require('../controllers/userController');
 const router = express.Router();
 
 //CRUD PPARA ADMIN
-// Rutas no RESTful para el recurso "users"
-router.post('/create', createUser);   // Crear un usuario
-router.get('/', getUsers); // Obtener todos los usuarios
-// Ruta para eliminar un usuario por su ID
-router.delete('/delete/:id', deleteUser);
+
+// Ruta para crear un usuario
+router.post('/created', createUser);
+
+// Ruta para obtener todos los usuarios
+router.get('/', getUsers);
+
+// Ruta para obtener un usuario por ID
+router.get('/:id', getUserById);
+
+// Ruta para actualizar un usuario
+router.put('/:id', updateUser);
+
+// Ruta para eliminar un usuario
+router.delete('/:id', deleteUser);
 module.exports = router;

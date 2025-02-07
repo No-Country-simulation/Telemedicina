@@ -22,7 +22,40 @@ const getUsers = async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 };
+// Obtener un usuario por ID
+const getUserById = async (req, res) => {
+    try {
+        const user = await User.findByPk(req.params.id);
+        if (!user) {
+            return res.status(404).json({ message: 'Usuario no encontrado' });
+        }
+        res.json(user);
+    } catch (error) {
+        res.status(500).json({ message: 'Error al obtener el usuario', error });
+    }
+};
+// Actualizar un usuario por ID
+const updateUser = async (req, res) => {
+    try {
+        const { name, email, password, role } = req.body;
+        const user = await User.findByPk(req.params.id);
 
+        if (!user) {
+            return res.status(404).json({ message: 'Usuario no encontrado' });
+        }
+
+        // Actualizar usuario
+        user.name = name || user.name;
+        user.email = email || user.email;
+        user.password = password || user.password;
+        user.role = role || user.role;
+
+        await user.save();
+        res.json({ message: 'Usuario actualizado exitosamente', user });
+    } catch (error) {
+        res.status(500).json({ message: 'Error al actualizar el usuario', error });
+    }
+};
 // Método para eliminar un usuario
 const deleteUser = async (req, res) => {
     try {
@@ -45,4 +78,4 @@ const deleteUser = async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 };
-module.exports = { createUser, getUsers, deleteUser };
+module.exports = { createUser, getUsers, deleteUser , getUserById , updateUser};
