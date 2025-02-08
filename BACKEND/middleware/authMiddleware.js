@@ -24,5 +24,28 @@ const verifyToken = (req, res, next) => {
         return res.status(403).json({ error: "Token inválido o expirado" });
     }
 };
+// Nuevo middleware para verificar si el usuario es administrador
+const verifyAdmin = async (req, res, next) => {
+    try {
+        // Verificamos si el usuario está autenticado
+        if (!req.user) {
+            return res.status(401).json({ error: 'Usuario no autenticado' });
+        }
 
-module.exports = verifyToken;
+        // Buscamos el usuario en la base de datos
+        const user = await User.findByPk(req.user.id);
+        if (!user) {
+            return res.status(404).json({ error: 'Usuario no encontrado' });
+        }
+
+        // Verificamos si el usuario tiene el rol de "admin"
+        if (user.role !== 'admin') {
+            return res.status(403).json({ error: 'Acceso denegado. Solo los administradores pueden realizar esta acción' });
+        }
+
+        next(); // Continúa con la ejecución de la siguiente función en la ruta
+    } catch (error) {
+        return res.status(500).json({ error: 'Error en la verificación del administrador' });
+    }
+};
+module.exports = { verifyToken, verifyAdmin };

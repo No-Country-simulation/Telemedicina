@@ -5,6 +5,8 @@ const sequelize = require('./config/database');
 const userRoutes = require('./routes/userRoutes');
 const patientRoutes = require('./routes/patientRoutes')
 const authRoutes = require('./routes/authRoutes');
+const medicoRoutes = require('./routes/medicoRoutes');
+const adminRoutes = require('./routes/adminRoutes');
 require('dotenv').config();
 
 const app = express();
@@ -15,9 +17,11 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Rutas
+app.use('/api/medicos', medicoRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/patients', patientRoutes)
 app.use('/api/auth', authRoutes);
+app.use('/api/admins', adminRoutes);
 
 // Sincronizar base de datos y levantar servidor
 sequelize.sync({ force: false }) // Cambia a `true` para resetear tablas en desarrollo

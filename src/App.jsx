@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
-import { LoginPage } from './auth/loginPage';
-import { RegisterPages } from './auth/registerPages';
+import { LoginPage } from './auth/LoginPage';
+import { RegisterPages } from './auth/RegisterPages';
 import LayoutLadingPage from './layouts/LayoutLadingPage';
 import Home from './views/Home/Home';
 import LayoutDashboard from './layouts/LayoutDashboard/LayoutDashboard';
